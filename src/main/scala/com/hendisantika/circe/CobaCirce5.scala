@@ -1,5 +1,8 @@
 package com.hendisantika.circe
 
+
+import java.util.Date
+
 import cats.syntax.either._
 import io.circe.{Decoder, DecodingFailure, HCursor, Json}
 import io.circe.optics.JsonPath._
@@ -87,17 +90,32 @@ object CobaCirce5 extends App {
 
   println("id --> " + id2)
 
-//  implicit val decodeDoc: Decoder[SolrDoc] = new Decoder[SolrDoc] {
-//    final def apply(c: HCursor): Decoder.Result[SolrDoc] = Left(DecodingFailure("Not implemented yet", c.history))
+//  val obj = decode[SolrDoc](json2)
+//  match {
+//    case Right(ok) => ok
+//    case Left(failure) => println("Gagal --> " + failure)
 //  }
 
-//  implicit val comDecoder: Decoder[SolrDoc] = deriveDecoder[SolrDoc]
-//
-//
-//  val obj = decode[SolrDoc](json2) match {
-//    case Left(failure) => println("Gagal --> " + failure)
-//    case Right(com) => println("OK")
-//      println(com)
+//  val solrDocument = obj match {
+//    case Xor.Right(r) => r
+//    case Xor.Left(l) => "document not found"
 //  }
+//
+//  solrDocument.response.get.docs.map { doc =>
+//    CommentInsert(
+//      commentId = doc.comment_id_l,
+//      articleId = doc.article_id_l,
+//      replyTo = doc.reply_to_id_l,
+//      userId = doc.user_id_l,
+//      username = doc.username_s,
+//      email = doc.email_s,
+//      content = doc.content_t,
+//      created = new Date(doc.created_ts_l),
+//      numReport = doc.report_i,
+//      isDeleted = doc.is_deleted_i,
+//      isActivated = 1L)
+//  }
+
+
 
 }

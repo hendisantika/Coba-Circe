@@ -23,7 +23,7 @@ object Implicits {
     Either.catchNonFatal(new Date(ts)).leftMap(t => "Date")
   }
 
-  implicit val comDecoder: Decoder[CommentInsert] = deriveDecoder[CommentInsert]
+  implicit val comDecoder: Decoder[Comments] = deriveDecoder[Comments]
 
 
 

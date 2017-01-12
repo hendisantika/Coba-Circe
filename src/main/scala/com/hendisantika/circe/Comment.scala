@@ -7,41 +7,22 @@ package com.hendisantika.circe
 case class SolrDoc(response: Option[SolrResponse])
 
 case class SolrResponse(
-                       numFound:Int,
-                       start : Int,
-                       docs : List[Docs]
+                         numFound:Int,
+                         start : Int,
+                         docs : List[Comments]
                        )
 
-case class Docs(
-                        id: String,
-                        comment_id_l: Option[Long],
-                        article_id_l: Option[Long],
-                        reply_to_id_l: Option[Long],
-                        user_id_l: Option[Long],
-                        username_s: Option[String],
-                        email_s: Option[String],
-                        content_t: String,
-                        report_i: Option[Int],
-                        type_s: Option[String],
-                        category_is: List[Int],
-                        category_ss: List[String],
-                        created_dt: Option[String],
-                        created_ts_l: Option[Long],
-                        is_deleted_i: Option[Int],
-                        country_code_s: Option[String],
-                        version: Option[Long]
-                      )
+case class Comments(
+                     comment_id_l: Option[Long],
+                     article_id_l: Long,
+                     reply_to_id_l: Long,
+                     user_id_l: Long,
+                     username_s: Option[String],
+                     email_s: Option[String],
+                     content_t: String,
+                     report_i: Long,
+                     created_ts_l: Long,
+                     is_deleted_i: Long
+                   )
 
-case class CommentInsert(
-    commentId: Option[String],
-    articleId: Option[String],
-    replyTo: Option[String],
-    userId: Option[String],
-    username: Option[String],
-    email: Option[String],
-    content: Option[String],
-    created: Option[String],
-    numReport: Option[String],
-    isDeleted: Option[String]
-)
 
