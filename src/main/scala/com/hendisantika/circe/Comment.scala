@@ -1,5 +1,7 @@
 package com.hendisantika.circe
 
+import java.util.Date
+
 /**
   * Created by hendisantika on 09/01/17.
   */
@@ -24,5 +26,19 @@ case class Comments(
                      created_ts_l: Long,
                      is_deleted_i: Long
                    )
+
+case class CommentInsert(
+                          commentId: Option[Long],
+                          articleId: Long,
+                          replyTo: Long,
+                          userId: Long,
+                          username: Option[String],
+                          email: Option[String],
+                          content: String,
+                          created: Date,
+                          numReport: Long,
+                          isDeleted: Long,
+                          isActivated: Long
+                        )
 
 
