@@ -14,19 +14,19 @@ object XtractJSON extends App {
     {
       "order": {
         "customer": {
-          "name": "Custy McCustomer",
+          "name": "Hendi Santika",
           "contactDetails": {
-            "address": "1 Fake Street, London, England",
+            "address": "Gandaria Office Tower 8, Jln. Sultan Iskandar Muda Kebayoran Baru Jakarta Selatan Indonesia",
             "phone": "0123-456-789"
           }
         },
         "items": [{
           "id": 123,
-          "description": "banana",
+          "description": "Xiaomi Note 3 Pro",
           "quantity": 1
         }, {
           "id": 456,
-          "description": "apple",
+          "description": "Canon EOS M3",
           "quantity": 2
         }],
         "total": 123.45
