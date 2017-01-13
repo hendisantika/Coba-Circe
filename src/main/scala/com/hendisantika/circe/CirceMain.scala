@@ -1,6 +1,5 @@
 package com.hendisantika.circe
 
-import io.circe.Encoder
 import io.circe.syntax._
 
 /**
