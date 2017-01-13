@@ -8,8 +8,9 @@ import io.circe.parser.decode
 /**
   * Created by hendisantika on 09/01/17.
   * This is step to decode JSON Object into scala class
+  * Serialize JSON to scala class
   */
-object CobaCirce5 extends App {
+object JSON2Class extends App {
   val rawJson: String =
     """
     {
