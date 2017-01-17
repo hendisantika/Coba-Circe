@@ -20,7 +20,7 @@ object CobaCirce extends App {
   case class User(value: String)
 
   object User {
-    implicit val decodeSha: Decoder[User] = Decoder.instance(_.get[String]("user")).map(User(_))
+    implicit val decode: Decoder[User] = Decoder.instance(_.get[String]("user")).map(User(_))
   }
 
   case class Commit(user: User, parentUser: List[User])
@@ -29,7 +29,7 @@ object CobaCirce extends App {
     implicit val decodeCommit: Decoder[Commit] = for {
       user <- Decoder[User]
       parents <- Decoder.instance(_.get[List[User]]("parents"))
-    } yield Commit(user, parents)
+    } yield( Commit(user, parents))
   }
 
 }
