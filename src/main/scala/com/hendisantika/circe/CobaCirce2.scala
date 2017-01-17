@@ -42,7 +42,7 @@ object CobaCirce2 extends App {
   val parseResult = parse(rawJson)
   match {
     case Left(failure) => println("Invalid JSON :()")
-    case Right(json) => println("Yay, got some JSON!")
+    case Right(json) => println("OK, ada nich JSON -Nya!")
   }
   // parseResult: Either[io.circe.ParsingFailure,io.circe.Json] =
   // Right({
